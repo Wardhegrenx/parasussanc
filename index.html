@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Un Libro Para Sussan</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: #f3ece7;
+      font-family: 'Georgia', serif;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .book {
+      width: 90%;
+      height: 90%;
+      background: #fffdf9;
+      box-shadow: 0 0 40px rgba(0,0,0,0.3);
+      padding: 60px;
+      overflow-y: auto;
+      position: relative;
+      z-index: 3;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 36px;
+    }
+
+    p {
+      text-align: justify;
+      line-height: 1.8;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    audio {
+      display: none;
+    }
+
+    .signature {
+      text-align: right;
+      margin-top: 40px;
+      font-size: 22px;
+    }
+
+    /* Scrollbar estilizado */
+    .book::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    .book::-webkit-scrollbar-thumb {
+      background-color: rgba(0,0,0,0.2);
+      border-radius: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .book {
+        width: 95%;
+        height: 95%;
+        padding: 40px 20px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+
+    /* Canvas de estrellas al fondo */
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Estrellas en movimiento -->
+  <canvas id="starCanvas"></canvas>
+
+  <div class="container">
+    <div class="book">
+      <h1>El inicio de un gran camino</h1>
+
+      <p>Hoy no es un día más. Es la suma de todo lo que hemos vivido, de cada momento que nos ha traído hasta aquí. Es la prueba de que el amor no necesita de grandes acontecimientos para ser inmenso, porque incluso en la sencillez de lo cotidiano, nosotros hemos construido algo irremplazable y en los momentos únicos, han sido una marca de hechos que jamás podremos vivir con alguien más ya que esto es de nosotros y si es de nosotros, será para siempre.</p>
+
+      <p>Hace casi un año que nuestras vidas se cruzaron, pero no fue ahí donde comenzó lo nuestro. Porque cuando te vi por primera vez, cuando tus ojos encontraron los míos, algo dentro de mí supo que ya te esperaba. Me sería imposible explicarte ya que jamás podrías verte a través de mis ojos pero aún con esto, siempre intento hacer hasta lo imposible para que puedas hacerlo y sepas lo maravillosa que eres y todo el amor que tengo por ti, y quiero decirte que solo sé que, desde ese instante, cada día ha sido una confirmación de todo el amor que he reflejado por ti en aquel primer segundo.</p>
+
+      <p>No ha sido un camino de perfección absoluta, pero eso es lo que lo hace aún más real y lo que hace que podamos unirnos más. Hemos reído hasta que nos doliera el cuerpo, hemos compartido silencios que decían más que mil palabras, hemos sido testigos de los días buenos y de los que pesaban más de la cuenta en donde en cada día nublado me he sentado a tú lado a escucharte para siempre entenderte, apoyarte, darte toda mi comprensión y estar en la posición que te sientes para ayudarte a lidiar con cada paso que des y jamás caigas, en donde siempre podré levantarte. Y debo decir que, en cada uno de ellos, te he amado cada vez más.</p>
+
+      <p>No porque el amor crezca con días difíciles, sino porque a tu lado he descubierto que el amor verdadero es el que no necesita razones para quedarse. No ama solo cuando todo es fácil, ama incluso cuando hay que sostenerse fuerte, cuando hay que elegir, cuando hay que demostrarlo más con hechos que es lo que siempre he dedicado mis días a hacer por ti, la mujer que amo con todo lo que soy, con todo lo que seré, con cada etapa de mí vida.</p>
+
+      <p>Y aquí estoy, demostrándolo desde el inicio, sin cambios, con transparencia, con el mismo amor de siempre e incluso más. Porque desde el primer día supe que eras tú. Porque nunca existieron dudas, solo la certeza de que mi vida no sería la misma sin ti.</p>
+
+      <p>Amo como podemos tener un amor maduro, de que podamos amarnos con la intensidad de la juventud, con la dedicación y preocupación de la adultez y con la promesa y sabiduría de la vejez. Amo todo de ti. Amo la forma en que sonríes sin darte cuenta, amo cómo hablas con emoción cuando algo te apasiona, amo el brillo de tus ojos cuando algo te hace feliz y más aún cuando ese brillo es al verme a mí. Amo tu calma, tu fortaleza, tu capacidad de hacerme sentir en casa sin importar dónde estemos. Amo quién eres, sin pretensiones, sin esfuerzos, simplemente tú, una mujer que es mucho más de lo que simplemente podemos ver.</p>
+
+      <p>Y no quiero amarte solo en los momentos fáciles. Quiero amarte cuando el día haya sido largo, cuando el mundo pese más de la cuenta, cuando las palabras sobren y solo haga falta un abrazo. Quiero ser tu apoyo, tu pilar, tus manos, tus ojos, tus pies aun cuando no los necesites, quiero ser tú guía y luz, quiero ser tu descanso cuando el cansancio llegue, tu certeza cuando todo parezca incierto.</p>
+
+      <p>No quiero prometerte perfección, pero sí probarte mi constancia, esfuerzo y la realidad del día a día de los cuales dedico totalmente mi vida a ti y a todo lo que quiero que seamos como una relación que no es de dos personas netamente, sino que viene acompañada de pedirle a Dios que forme parte de ella, que no te abandone, que no me abandone y que fortalezca lo que somos.</p>
+
+      <p>Que sin importar lo que pase, aquí estaré. Porque amarte no es un impulso pasajero, es la decisión más clara y hermosa de mi vida, es la prueba del tiempo, es la juventud que te entrego, la adultez de mi ahora, el pasar de la vida junto a ti.</p>
+
+      <p>Y aunque hoy pueda decir que oficialmente soy tuyo, la verdad es que ya lo era desde hace mucho tiempo. No porque el amor se pueda poseer, sino porque desde el momento en que supe lo que sentía por ti, nunca quise que fuera de otra manera.</p>
+
+      <p>Así que, Sussan, en resumidas palabras e infundidas de todo el amor que tengo para darte:</p>
+
+      <p>Te amo, sin reservas, sin final, sin medida.</p>
+
+      <p>Te amo en lo simple, en lo complejo, en lo que hemos sido, en la verdad, en los hechos, en lo que construimos y construiremos juntos.</p>
+
+      <p>Te amo, y lo verás reflejado cada día; jamás es una promesa vacía, es una realidad del cual eres el testigo eterno.</p>
+
+      <p>No me avergüenza expresarte todo esto, que el mundo lo vea, que sepan que eres tú y amo que seamos tú y yo.</p>
+
+      <div class="signature">
+        Atentamente,<br>
+        Eduardo Barreto
+      </div>
+    </div>
+  </div>
+
+  <!-- AUDIO DE FONDO -->
+  <audio id="bg-music" src="musica.mp3" autoplay loop></audio>
+
+  <script>
+    // Reproducción automática (clic extra si el navegador lo exige)
+    window.addEventListener('click', () => {
+      const music = document.getElementById("bg-music");
+      if (music.paused) {
+        music.play();
+      }
+    });
+
+    // ESTRELLAS ANIMADAS
+    const canvas = document.getElementById('starCanvas');
+    const ctx = canvas.getContext('2d');
+
+    let stars = [];
+
+    function initStars() {
+      stars = [];
+      const numStars = 80; // Cantidad de estrellas
+      for (let i = 0; i < numStars; i++) {
+        stars.push({
+          x: Math.random() * window.innerWidth,
+          y: Math.random() * window.innerHeight,
+          radius: Math.random() * 2 + 1,
+          speed: Math.random() * 0.5 + 0.2
+        });
+      }
+    }
+
+    function drawStars() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'rgba(255, 223, 0, 0.8)'; // Amarillo estrella
+
+      for (let star of stars) {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      moveStars();
+    }
+
+    function moveStars() {
+      for (let star of stars) {
+        star.y += star.speed;
+        if (star.y > window.innerHeight) {
+          star.y = 0;
+          star.x = Math.random() * window.innerWidth;
+        }
+      }
+    }
+
+    function animate() {
+      drawStars();
+      requestAnimationFrame(animate);
+    }
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      initStars();
+    }
+
+    window.addEventListener('resize', resizeCanvas);
+
+    // Inicialización
+    resizeCanvas();
+    animate();
+  </script>
+
+</body>
+</html>
