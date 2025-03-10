@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Un Libro Para Sussan</title>
+  <title>Carta para mi eterno amor</title>
   <style>
     * {
       box-sizing: border-box;
@@ -63,7 +63,7 @@
       font-size: 22px;
     }
 
-    /* Scrollbar estilizado */
+    /* Scrollbar para mover la pagina pues jeje */
     .book::-webkit-scrollbar {
       width: 10px;
     }
@@ -144,11 +144,11 @@
     </div>
   </div>
 
-  <!-- AUDIO DE FONDO -->
+  <!-- AUDIO DE FONDO, cambiandole el nombre para no valer v por copyr -->
   <audio id="bg-music" src="musica.mp3" autoplay loop></audio>
 
   <script>
-    // Reproducción automática (clic extra si el navegador lo exige)
+    // Reproducción automática (con touch extra si el navegador lo exige)
     window.addEventListener('click', () => {
       const music = document.getElementById("bg-music");
       if (music.paused) {
